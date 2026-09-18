@@ -1,8 +1,250 @@
+:root {
+  --color-bg: #101312;
+  --color-panel: #171b19;
+  --color-text: #f5f7ef;
+  --color-muted: #9ea69f;
+  --color-line: #39403b;
+  --color-accent: #b8f34a;
+  --layout: 1160px;
+}
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.layout {
+  width: min(var(--layout), calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-header__inner,
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.site-header__brand {
+  color: var(--color-accent);
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.site-header__nav a {
+  color: var(--color-muted);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  margin-block: 48px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+}
+
+.panel {
+  padding: 42px;
+  background: var(--color-panel);
+}
+
+.panel--wide {
+  grid-column: 1 / -1;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 72px;
+  min-height: 520px;
+  align-items: end;
+}
+
+.label,
+.data-card__index {
+  margin: 0 0 18px;
+  color: var(--color-accent);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 800px;
+  margin-bottom: 28px;
+  font-size: 72px;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.hero__lead {
+  max-width: 720px;
+  color: var(--color-muted);
+  font-size: 20px;
+}
+
+.story__lead {
+  color: var(--color-muted);
+  font-size: 20px;
+}
+
+.hero__summary {
+  padding-left: 28px;
+  border-left: 1px solid var(--color-line);
+}
+
+.hero__result {
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.text-link {
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.story p:last-child {
+  color: var(--color-muted);
+}
+
+.key-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.key-point p:last-child {
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.details__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.details__heading h2,
+.details__heading p {
+  margin-bottom: 0;
+}
+
+.details__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+}
+
+.data-card {
+  min-height: 250px;
+  padding: 28px;
+  background: var(--color-bg);
+}
+
+.data-card--accent {
+  color: var(--color-bg);
+  background: var(--color-accent);
+}
+
+.data-card--accent .data-card__index {
+  color: var(--color-bg);
+}
+
+.data-card__title {
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+.data-card__text {
+  color: inherit;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.action h2 {
+  margin-bottom: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+}
+
+.site-footer p {
+  margin-bottom: 0;
 }
