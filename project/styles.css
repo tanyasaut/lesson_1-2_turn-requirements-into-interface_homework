@@ -249,3 +249,66 @@ h2 {
 .site-footer p {
   margin-bottom: 0;
 }
+
+@media (max-width: 700px){
+  .layout{
+    width: min(var(--layout), calc(100% - 32px));
+  }
+
+  .site-header__inner,
+  .site-footer__inner {
+    min-height: 64px;
+  }
+
+  .site-header__nav {
+    gap: 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    min-height: auto;
+  }
+
+  .hero__summary {
+    padding-left: 0;
+    padding-top: 24px;
+    border-left: none;
+    border-top: 1px solid var(--color-line);
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .panel {
+    padding: 28px;
+  }
+
+  .details__heading {
+    display: block;
+  }
+
+  .details__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-card {
+    min-height: auto;
+  }
+
+  .action {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .button {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
