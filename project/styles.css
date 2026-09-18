@@ -1,10 +1,10 @@
 :root {
-  --color-bg: #101312;
-  --color-panel: #171b19;
-  --color-text: #f5f7ef;
-  --color-muted: #9ea69f;
-  --color-line: #39403b;
-  --color-accent: #b8f34a;
+  --color-bg: #0d1020;
+  --color-panel: #151a2d;
+  --color-text: #ddddff;
+  --color-muted: #9fa4bb;
+  --color-line: #303752;
+  --color-accent: #7f57dc;
   --layout: 1160px;
 }
 
@@ -53,7 +53,7 @@ a:focus-visible {
 .site-header__brand {
   color: var(--color-accent);
   font-family: "Courier New", monospace;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -72,15 +72,16 @@ a:focus-visible {
 .page-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
+  gap: 24px;
   margin-block: 48px;
-  background: var(--color-line);
-  border: 1px solid var(--color-line);
+  
+  
 }
 
 .panel {
   padding: 42px;
   background: var(--color-panel);
+  border: 1px solid var(--color-line);
 }
 
 .panel--wide {
@@ -91,7 +92,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 72px;
-  min-height: 520px;
+  min-height: 380px;
   align-items: end;
 }
 
