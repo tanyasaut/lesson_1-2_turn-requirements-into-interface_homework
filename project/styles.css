@@ -162,11 +162,7 @@ h2 {
   color: var(--color-muted);
 }
 
-.key-point {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 
 .key-point p:last-child {
   margin-bottom: 0;
